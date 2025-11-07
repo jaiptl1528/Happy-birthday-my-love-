@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Forever ♾️</title>
+  <style>
+    :root {--bg:#071028;--accent:#ff6b6b;}
+    body {
+      margin:0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg,#00111a,#071028);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      text-align:center;
+      flex-direction:column;
+      padding:20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 0 25px rgba(0,0,0,0.6);
+      max-width:420px;
+    }
+    h1 {
+      color:var(--accent);
+      font-size:26px;
+      margin-bottom:15px;
+    }
+    img {
+      width:100%;
+      border-radius:12px;
+      box-shadow:0 0 20px #ff6b6b;
+    }
+    .cake {
+      position:relative;
+      margin:25px auto;
+      width:200px;
+      height:150px;
+    }
+    .plate {
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:0;
+      width:220px;
+      height:20px;
+      background:linear-gradient(90deg,#ecf0f3,#dfe8f3);
+      border-radius:12px;
+    }
+    .body {
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:20px;
+      width:180px;
+      height:100px;
+      background:linear-gradient(180deg,#ffb3b3,#ff6b6b);
+      border-radius:12px;
+    }
+    .candle {
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:120px;
+      width:10px;
+      height:40px;
+      background:#fff;
+      border-radius:4px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+    }
+    .wick {
+      width:2px;
+      height:6px;
+      background:#222;
+      border-radius:2px;
+      margin-bottom:3px;
+    }
+    .flame {
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:160px;
+      width:16px;
+      height:24px;
+      border-radius:50%;
+      background:linear-gradient(180deg,#ffd166,#ff6b6b);
+      animation:flicker 300ms infinite;
+    }
+    .hidden { display:none; }
+    @keyframes flicker {
+      0% {transform:translateX(-50%) scaleY(1);}
+      50% {transform:translateX(-48%) scaleY(0.95);}
+      100% {transform:translateX(-50%) scaleY(1);}
+    }
+    p {
+      font-size:14px;
+      color:#ccc;
+      margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Happy Birthday My Forever ♾️ 💖</h1>
+
+    <!-- 👇 Yahan apni image link daalo -->
+    <img src="https://raw.githubusercontent.com/jaiptl1528/birthday-for-my-love/main/FB_IMG_1762530241972.jpg" alt="Birthday Cake">
+
+    <div class="cake">
+      <div class="plate"></div>
+      <div class="body"></div>
+      <div class="candle">
+        <div class="wick"></div>
+      </div>
+      <div class="flame" id="flame"></div>
+    </div>
+
+    <p>🎂 Tap or shake your phone to blow the candle!</p>
+  </div>
+
+  <script>
+    const flame = document.getElementById("flame");
+    function blow() {
+      flame.classList.add("hidden");
+      setTimeout(()=>flame.classList.remove("hidden"), 4000);
+    }
+    window.addEventListener("click", blow);
+    window.addEventListener("deviceorientation", blow);
+  </script>
+</body>
+</html>
