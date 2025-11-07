@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love 🎂💖</title>
+<style>
+  <img src="https://raw.githubusercontent.com/jaiptl1528/birthday-for-my-love/main/meri_photo.jpg">
+  body {
+    text-align: center;
+    background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+    font-family: 'Comic Sans MS', cursive;
+    overflow-x: hidden;
+  }
+  h1 {
+    color: #ff1493;
+    font-size: 2.5em;
+    animation: glow 2s infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff69b4; }
+    to { text-shadow: 0 0 25px #ff1493; }
+  }
+  img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff69b4;
+    margin-top: 15px;
+  }
+  #cake {
+    position: relative;
+    width: 200px;
+    margin: 30px auto;
+  }
+  #flame {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width: 10px;
+    height: 40px;
+    background: radial-gradient(circle, orange, red);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.2s infinite;
+  }
+  @keyframes flicker {
+    0% {opacity: 1;}
+    50% {opacity: 0.7;}
+    100% {opacity: 1;}
+  }
+</style>
+</head>
+<body>
+
+<h1>🎉 Happy Birthday My Love 💖</h1>
+<p>Wishing you a day filled with love, laughter, and happiness!</p>
+
+<!-- Replace this link with your uploaded photo -->
+<img src="https://raw.githubusercontent.com/jaiptl1528/birthday-for-my-love/main/meri_photo.jpg" alt="Our Photo">
+
+<div id="cake">
+  <div id="flame"></div>
+  <img src="https://i.imgur.com/tcake.png" alt="Birthday Cake">
+</div>
+
+<audio id="music" autoplay loop>
+  <source src="https://www.dropbox.com/scl/fi/s9g6uq8ml4f6p9wczv3in/happy-birthday-song.mp3?raw=1" type="audio/mpeg">
+</audio>
+
+<p>🎂 Blow on your mic or shake your phone to blow out the candle!</p>
+
+<script>
+let flame = document.getElementById("flame");
+window.addEventListener("deviceorientation", ()=>{flame.style.display="none";});
+window.addEventListener("click", ()=>{flame.style.display="none";});
+</script>
+
+</body>
+</html>
